@@ -24,6 +24,7 @@ RUN vagrant box add --provider libvirt peru/windows-10-enterprise-x64-eval
 RUN vagrant init peru/windows-10-enterprise-x64-eval
 
 COPY startup.sh /
+RUN chmod +x startup.sh
 
 ENTRYPOINT ["/startup.sh"]
 
